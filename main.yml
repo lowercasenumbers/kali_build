@@ -2,17 +2,6 @@
 - name: 'Configuring Kali'
   hosts: localhost
   connection: local
-  tasks:
-  - name: "Configure git user.name"
-    git_config:
-      name: user.name
-      scope: global
-      value: 'lowercasenumbers'
-  - name: "Configure git user.email"
-    git_config:
-      name: user.email
-      scope: global
-      value: 'lowercasenumbers@lc.com'
   roles:
     - role: "roles/configure-tmux"
-
+    - role: "roles/configure-git"
