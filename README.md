@@ -4,11 +4,15 @@ This is a simple ansible playbook that I use to rebuild my Kali linux VMs period
 - Clone my dotfiles
 - Copy my tmux configuration to ~/.tmux.conf
 - Configure git user.name and user.email
-- 
+
+TODO:
+- Clone Shaphound Collection Scripts
+- apt update
+- apt upgrade 
 
 # Running the Playbook
 ```
-sudo apt install ansible
+pip3 install ansible
 sudo whoami
 ansible-playbook main.yml
 ```
