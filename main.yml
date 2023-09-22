@@ -6,3 +6,4 @@
     - role: "roles/configure-tmux"
     - role: "roles/configure-git"
     - role: "roles/configure-vim"
+    - role: "roles/install-tools"
