@@ -1,0 +1,19 @@
+---
+# tasks file for configure-tmux
+- name: "Install Tmux"
+  apt: 
+    name: tmux
+    state: present
+  become: true
+  become_method: sudo
+- name: "Download Latest dotfiles"
+  git:
+    repo: https://github.com/lowercasenumbers/dotfiles.git
+    dest: "{{ ansible_env.HOME}}/code/dotfiles"
+    clone: yes
+    update: yes
+    force: yes
+- name: "Copy .tmux.conf file"
+  copy:
+    src: "{{ ansible_env.HOME }}/code/dotfiles/.tmux.conf"
+    dest: "{{ ansible_env.HOME }}/.tmux.conf"
