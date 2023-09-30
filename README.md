@@ -9,6 +9,11 @@ This is a simple ansible playbook that I use to rebuild my Kali linux VMs period
 - Updates Apt 
 - Upgrades Packages
 
+TODO:
+- Enable vmhgfs
+	- /usr/bin/vmhgfs-fuse --enabled
+- Mount Shared Folder
+	- /usr/bin/vmhgfs-fuse --enabled
 
 # Running the Playbook
 ```
